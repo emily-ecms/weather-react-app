@@ -2,6 +2,12 @@
   text-align: center;
 }
 
+.App .container {
+  margin: 30px 60px;
+  border: 1px solid black;
+  
+}
+
 .App-header {
   background-color: #fff;
   min-height: 100vh;
