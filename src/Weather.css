@@ -1,0 +1,16 @@
+.Weather .temperature {
+    font-size: 60px;
+}
+
+.Weather .icon {
+    width: 160px;
+}
+
+.Weather .description {
+    text-transform: capitalize;
+}
+
+.Weather .weatherData {
+    font-size: 16px;
+    list-style-type: none;
+}

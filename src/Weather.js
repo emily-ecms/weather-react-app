@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
+import "./Weather.css"
 
 //import axios from "axios";
 
@@ -12,7 +13,7 @@ export default function Weather() {
     const form = (
     <form onSubmit={searchCity} >
         
-                 <input type="text" className="form-control" placeholder="Search city" onChange={updateCity}></input>
+                 <input type="search" className="form-control" placeholder="Search city" onChange={updateCity}></input>
                <button type="submit" className="btn btn-primary">Search</button>
             
             </form>
@@ -26,10 +27,13 @@ export default function Weather() {
     function setData(response) {
         setWeather({
             city: response.data.name,
+            description: response.data.weather[0].description,
             temp: response.data.main.temp,
             humidity: response.data.main.humidity,
-            wind: response.data.wind.speed
+            wind: response.data.wind.speed,
+            icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
         })
+        
         setDataShowing(true);
     }
 
@@ -48,14 +52,33 @@ export default function Weather() {
 
     if(dataShowing) {
     return(
-        <div>
+        <div className="Weather">
         {form}
-        <ul>
-        <li>Current Weather in {weather.city}</li>
-        <li>Temperature: {Math.round(weather.temp)} °C</li>
-        <li>Humidity: {weather.humidity} %</li>
-        <li>Wind Speed: {Math.round(weather.wind)} km/h</li>
-        </ul>
+        <div className="row m-5">
+            <div className="col-4">
+                <h2 className="mt-2 mb-2"> {weather.city}</h2>
+                
+                    <div className="temperature">{Math.round(weather.temp)} °C </div>
+                    
+                
+            </div>
+
+            <div className="col-4">
+               <img src={weather.icon} alt={weather.description} className="icon"/> 
+            </div>
+
+            <div className="col-4">
+             <h3 className="description">{weather.description}</h3>
+                <ul className="weatherData">
+                    <li>Humidity: {weather.humidity} %</li>
+                    <li>Wind Speed: {Math.round(weather.wind)} km/h</li>
+                </ul>
+            </div>
+            
+            
+        
+        
+        </div>
         </div>
     )
     }
