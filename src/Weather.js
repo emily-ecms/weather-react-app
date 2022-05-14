@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import 'bootstrap/dist/css/bootstrap.css';
 
 //import axios from "axios";
 
@@ -8,10 +9,15 @@ export default function Weather() {
     const [weather, setWeather] = useState({});
     const [dataShowing, setDataShowing] = useState(false);
 
-    const form = (<form onSubmit={searchCity}>
-                <input type="search" placeholder="Search city" onChange={updateCity}></input>
-                <button>Search</button>
-            </form>);
+    const form = (
+    <form onSubmit={searchCity} >
+        
+                 <input type="text" className="form-control" placeholder="Search city" onChange={updateCity}></input>
+               <button type="submit" className="btn btn-primary">Search</button>
+            
+            </form>
+     
+  );
 
     function updateCity(event) {
         setCity(event.target.value);
