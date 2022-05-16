@@ -7,9 +7,8 @@ import "./Weather.css"
 
 export default function Weather() {
     const [city, setCity] = useState("");
-    const [weather, setWeather] = useState({});
-    const [dataShowing, setDataShowing] = useState(false);
-
+    const [weather, setWeather] = useState({dataShowing: false});
+   
     const form = (
     <form onSubmit={searchCity} >
         <div className="row">
@@ -31,6 +30,7 @@ export default function Weather() {
 
     function setData(response) {
         setWeather({
+            dataShowing: true,
             city: response.data.name,
             description: response.data.weather[0].description,
             temp: response.data.main.temp,
@@ -39,7 +39,7 @@ export default function Weather() {
             icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
         })
         
-        setDataShowing(true);
+       
     }
 
     function searchCity(event) {
@@ -55,7 +55,7 @@ export default function Weather() {
         //setDataShowing(true);
     }
 
-    if(dataShowing) {
+    if(weather.dataShowing) {
     return(
         <div className="Weather">
         {form}
