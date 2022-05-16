@@ -54,7 +54,7 @@ export default function Weather() {
         <div className="Weather">
            
         {form}
-       <Icon icon={weather.icon} color="#000" size={120} animate={true} />
+       <Icon icon={weather.icon} />
        <WeatherData weather={weather} />
        
         <div className="row forecast">
