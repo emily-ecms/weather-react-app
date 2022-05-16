@@ -7,12 +7,27 @@
 }
 
 .Weather .city {
-    font-size: 46px;
+    font-size: 36px;
+    text-align: left;
+    opacity: 0.7;
+}
+
+.Weather .temperature {
+    font-size: 54px;
+    text-align: left;
+}
+
+.Weather .unit {
+    font-size: 30px;
 }
 
 .Weather .description {
     text-transform: capitalize;
     font-weight: 200;
+    opacity: 0.7;
+    text-align: left;
+    margin-top: 1px;
+    font-size: 22px;
 }
 
 .Weather .weatherData {
@@ -21,6 +36,7 @@
     opacity: 0.7;
     margin: auto;
     padding: 0;
+    text-align: right;
 }
 
 .Weather .tempMin {

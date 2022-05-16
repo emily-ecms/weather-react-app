@@ -59,33 +59,29 @@ export default function Weather() {
     return(
         <div className="Weather">
         {form}
-        <div className="row m-5">
-            <div className="col-4">
-                <h2 className="city mt-2 mb-2"> {weather.city}</h2>
-                
-                    <div className="temperature">{Math.round(weather.temp)} °C </div>
-                    
-                
-            </div>
-
-            <div className="col-4">
-               <img src={weather.icon} alt={weather.description} className="icon"/> 
-            </div>
-
-            <div className="col-4">
-             <h2 className="description mt-2 mb-2">{weather.description}</h2>
-                <ul className="weatherData">
-                    <li>Humidity: {weather.humidity} %</li>
-                    <li>Wind Speed: {Math.round(weather.wind)} km/h</li>
-                </ul>
-            </div>
-            
-            
-        
-        
-        </div>
-
+        <h2 className="city mt-2 mb-2"> {weather.city}</h2>
+        <p className="description mb-2">{weather.description}</p>
         <div className="row">
+
+            <div className="col">
+            <div className="temperature">{Math.round(weather.temp)}<span className="unit"> °C </span></div>
+            </div>
+
+            <div className="col">
+            <img src={weather.icon} alt={weather.description} className="icon"/> 
+            </div>
+
+            <div className="col">
+            <ul className="weatherData">
+                <li>Humidity: {weather.humidity} %</li>
+                <li>Wind Speed: {Math.round(weather.wind)} km/h</li>
+            </ul>
+            </div>
+
+        </div>
+       
+        <div className="row">
+
             <div className="col">
                 <div className="card">
                     <ul className="weatherData">
@@ -95,6 +91,7 @@ export default function Weather() {
                 </ul>
                 </div>
             </div>
+
             <div className="col">
                 <div className="card">
                     <ul className="weatherData">
@@ -104,6 +101,7 @@ export default function Weather() {
                     </ul>
                 </div>
             </div>
+
             <div className="col">
                 <div className="card">
                     <ul className="weatherData">
@@ -113,6 +111,7 @@ export default function Weather() {
                     </ul>
                 </div>
             </div>
+
             <div className="col">
                 <div className="card">
                     <ul className="weatherData">
@@ -122,6 +121,7 @@ export default function Weather() {
                     </ul>
                 </div>
             </div>
+
             <div className="col">
                 <div className="card">
                     <ul className="weatherData">
@@ -131,6 +131,7 @@ export default function Weather() {
                     </ul>
                 </div>
             </div>
+            
         </div>
 
         </div>
