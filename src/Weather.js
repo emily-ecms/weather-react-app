@@ -12,9 +12,14 @@ export default function Weather() {
 
     const form = (
     <form onSubmit={searchCity} >
-        
-                 <input type="search" className="form-control" placeholder="Search city" onChange={updateCity}></input>
-               <button type="submit" className="btn btn-primary">Search</button>
+        <div className="row">
+            <div className="col-9">
+            <input type="search" className="form-control" placeholder="Search city" onChange={updateCity}></input>
+            </div>
+        <div className="col-3">
+            <button type="submit" className="btn btn-primary">Search</button>
+            </div>
+            </div>
             
             </form>
      
