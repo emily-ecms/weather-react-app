@@ -3,7 +3,9 @@
 }
 
 .Weather .icon {
-    width: 160px;
+    width: 200px;
+    position: relative;
+    bottom: 34px;
 }
 
 .Weather .city {
@@ -13,12 +15,15 @@
 }
 
 .Weather .temperature {
-    font-size: 54px;
+    font-size: 74px;
     text-align: left;
+    font-weight: bold;
 }
 
 .Weather .unit {
-    font-size: 30px;
+    font-size: 20px;
+    position: relative;
+    bottom: 36px;
 }
 
 .Weather .description {
@@ -37,8 +42,26 @@
     margin: auto;
     padding: 0;
     text-align: right;
+    position: relative;
+    top: 30px;
 }
 
 .Weather .tempMin {
     opacity: 0.6;
+}
+
+.Weather .card {
+    border: none;
+}
+
+.Weather .forecastCard ul {
+    border: solid 1px red;
+    border-radius: 4px;
+   text-align: center;
+   
+}
+
+.Weather .forecastCard {
+position: relative;
+    bottom: 50px;
 }

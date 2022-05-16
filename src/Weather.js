@@ -59,7 +59,7 @@ export default function Weather() {
     return(
         <div className="Weather">
         {form}
-        <h2 className="city mt-2 mb-2"> {weather.city}</h2>
+        <h2 className="city mt-4 mb-2"> {weather.city}</h2>
         <p className="description mb-2">{weather.description}</p>
         <div className="row">
 
@@ -80,20 +80,20 @@ export default function Weather() {
 
         </div>
        
-        <div className="row">
+        <div className="row forecast">
 
             <div className="col">
-                <div className="card">
+                <div className="card forecastCard">
                     <ul className="weatherData">
                     <li>Mon</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
                     <li>20° <span className="tempMin"> 12°</span></li>
-                </ul>
+                    </ul>
                 </div>
             </div>
 
             <div className="col">
-                <div className="card">
+                <div className="card forecastCard">
                     <ul className="weatherData">
                     <li>Tue</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
@@ -103,7 +103,7 @@ export default function Weather() {
             </div>
 
             <div className="col">
-                <div className="card">
+                <div className="card forecastCard">
                     <ul className="weatherData">
                     <li>Wed</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
@@ -113,7 +113,7 @@ export default function Weather() {
             </div>
 
             <div className="col">
-                <div className="card">
+                <div className="card forecastCard">
                     <ul className="weatherData">
                     <li>Thu</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
@@ -123,7 +123,7 @@ export default function Weather() {
             </div>
 
             <div className="col">
-                <div className="card">
+                <div className="card forecastCard">
                     <ul className="weatherData">
                     <li>Fri</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
