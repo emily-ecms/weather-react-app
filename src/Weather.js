@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Weather.css"
 import WeatherData from "./WeatherData";
+import Icon from "./Icon";
 
 export default function Weather() {
     const [city, setCity] = useState("");
@@ -33,7 +34,7 @@ export default function Weather() {
             temp: response.data.main.temp,
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
-            icon: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+            icon: response.data.weather[0].icon,
             dataShowing: true
         })  
     }
@@ -51,12 +52,13 @@ export default function Weather() {
         <div className="Weather">
         {form}
        <WeatherData weather={weather} />
+       <Icon weather={weather}/>
        
         <div className="row forecast">
 
             <div className="col">
                 <div className="card forecastCard">
-                    <ul className="weatherData">
+                    <ul className="forecastData">
                     <li>Mon</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
                     <li>20° <span className="tempMin"> 12°</span></li>
@@ -66,7 +68,7 @@ export default function Weather() {
 
             <div className="col">
                 <div className="card forecastCard">
-                    <ul className="weatherData">
+                    <ul className="forecastData">
                     <li>Tue</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
                     <li>20° <span className="tempMin"> 12°</span></li>
@@ -76,7 +78,7 @@ export default function Weather() {
 
             <div className="col">
                 <div className="card forecastCard">
-                    <ul className="weatherData">
+                    <ul className="forecastData">
                     <li>Wed</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
                     <li>20° <span className="tempMin"> 12°</span></li>
@@ -86,7 +88,7 @@ export default function Weather() {
 
             <div className="col">
                 <div className="card forecastCard">
-                    <ul className="weatherData">
+                    <ul className="forecastData">
                     <li>Thu</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
                     <li>20° <span className="tempMin"> 12°</span></li>
@@ -96,7 +98,7 @@ export default function Weather() {
 
             <div className="col">
                 <div className="card forecastCard">
-                    <ul className="weatherData">
+                    <ul className="forecastData">
                     <li>Fri</li>
                     <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
                     <li>20° <span className="tempMin"> 12°</span></li>
