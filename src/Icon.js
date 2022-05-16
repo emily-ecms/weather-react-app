@@ -31,9 +31,9 @@ export default function Icon(props) {
     if(icon === "50d" || icon === "50n") {
         icon = ("FOG");
     } 
+}}}}}}}
 
-    }
-}}}}}}
+console.log(`icon code is ${icon}`);
 
 return (
     <div className="weatherIcon">

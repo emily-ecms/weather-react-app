@@ -38,7 +38,7 @@ export default function Weather() {
             icon: response.data.weather[0].icon,
             dataShowing: true            
         });
-        console.log(`Icon code is ${weather.icon}`);
+        console.log(`1 Icon code is ${weather.icon}`);
     }
 
     function searchCity(event) {
@@ -54,7 +54,7 @@ export default function Weather() {
         <div className="Weather">
            
         {form}
-       <Icon icon={weather.icon} color="#000" size={100} animate={true} />
+       <Icon icon={weather.icon} color="#000" size={120} animate={true} />
        <WeatherData weather={weather} />
        
         <div className="row forecast">
