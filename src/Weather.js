@@ -5,6 +5,7 @@ import "./Weather.css"
 import WeatherData from "./WeatherData";
 import Icon from "./Icon";
 
+
 export default function Weather() {
     const [city, setCity] = useState("");
     const [weather, setWeather] = useState({dataShowing: false});
@@ -35,8 +36,9 @@ export default function Weather() {
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             icon: response.data.weather[0].icon,
-            dataShowing: true
-        })  
+            dataShowing: true            
+        });
+        console.log(`Icon code is ${weather.icon}`);
     }
 
     function searchCity(event) {
@@ -50,9 +52,10 @@ export default function Weather() {
     if(weather.dataShowing) {
     return(
         <div className="Weather">
+           
         {form}
+       <Icon icon={weather.icon} color="#000" size={100} animate={true} />
        <WeatherData weather={weather} />
-       <Icon weather={weather}/>
        
         <div className="row forecast">
 

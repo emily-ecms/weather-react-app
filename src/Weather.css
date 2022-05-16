@@ -42,8 +42,17 @@
     margin: auto;
     padding: 0;
     text-align: right;
+    
+}
+
+.Weather .WeatherData {
     position: relative;
-    top: 30px;
+    bottom: 70px;
+}
+
+.Weather .weatherStats {
+    list-style-type: none;
+    opacity: 0.7;
 }
 
 .Weather .tempMin {
@@ -62,8 +71,8 @@
 }
 
 .Weather .forecastCard {
-position: relative;
-    bottom: 100px;
+    position: relative;
+    bottom: 40px;
 }
 
 .Weather .formattedDate {
@@ -71,7 +80,8 @@ position: relative;
     opacity: 0.6;
 }
 
-.Weather .icon {
+.Weather .weatherIcon {
     position: relative;
-    bottom: 110px;
+    top: 190px;
+    opacity: 0.7;
 }
