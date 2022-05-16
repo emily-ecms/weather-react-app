@@ -14,10 +14,10 @@ export default function Weather() {
     <form onSubmit={searchCity} >
         <div className="row">
             <div className="col-9">
-            <input type="search" className="form-control" placeholder="Search city" onChange={updateCity}></input>
+            <input type="search" className="form-control" placeholder="Search city" autoFocus="on" onChange={updateCity}></input>
             </div>
         <div className="col-3">
-            <button type="submit" className="btn btn-primary">Search</button>
+            <button type="submit" className="btn btn-primary w-100">Search</button>
             </div>
             </div>
             
@@ -74,7 +74,7 @@ export default function Weather() {
             <div className="col">
             <ul className="weatherData">
                 <li>Humidity: {weather.humidity} %</li>
-                <li>Wind Speed: {Math.round(weather.wind)} km/h</li>
+                <li>Wind: {Math.round(weather.wind)} km/h</li>
             </ul>
             </div>
 
@@ -131,7 +131,7 @@ export default function Weather() {
                     </ul>
                 </div>
             </div>
-            
+
         </div>
 
         </div>
