@@ -51,67 +51,13 @@ export default function Weather() {
 
     if(weather.dataShowing) {
     return(
-        <div className="Weather">
-           
-        {form}
+       <div className="Weather">
+          
+       {form}
        <Icon icon={weather.icon} />
        <WeatherData weather={weather} />
-       
-        <div className="row forecast">
 
-            <div className="col">
-                <div className="card forecastCard">
-                    <ul className="forecastData">
-                    <li>Mon</li>
-                    <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
-                    <li>20° <span className="tempMin"> 12°</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className="col">
-                <div className="card forecastCard">
-                    <ul className="forecastData">
-                    <li>Tue</li>
-                    <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
-                    <li>20° <span className="tempMin"> 12°</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className="col">
-                <div className="card forecastCard">
-                    <ul className="forecastData">
-                    <li>Wed</li>
-                    <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
-                    <li>20° <span className="tempMin"> 12°</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className="col">
-                <div className="card forecastCard">
-                    <ul className="forecastData">
-                    <li>Thu</li>
-                    <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
-                    <li>20° <span className="tempMin"> 12°</span></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div className="col">
-                <div className="card forecastCard">
-                    <ul className="forecastData">
-                    <li>Fri</li>
-                    <li><img src="https://openweathermap.org/img/wn/02d@2x.png" alt="Cloudy" /></li>
-                    <li>20° <span className="tempMin"> 12°</span></li>
-                    </ul>
-                </div>
-            </div>
-
-        </div>
-
-        </div>
+       </div>
     )
     }
     else {
