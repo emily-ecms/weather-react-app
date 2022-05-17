@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import "./Weather.css"
 import WeatherData from "./WeatherData";
 import Icon from "./Icon";
+import Forecast from "./Forecast";
 
 
 export default function Weather() {
@@ -36,6 +37,7 @@ export default function Weather() {
             humidity: response.data.main.humidity,
             wind: response.data.wind.speed,
             icon: response.data.weather[0].icon,
+            coordinates: response.data.coord,
             dataShowing: true            
         });
         console.log(`1 Icon code is ${weather.icon}`);
@@ -56,6 +58,7 @@ export default function Weather() {
        {form}
        <Icon icon={weather.icon} />
        <WeatherData weather={weather} />
+       <Forecast weather={weather}/>
 
        </div>
     )

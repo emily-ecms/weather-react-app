@@ -4,10 +4,11 @@
     font-weight: bold;
 }
 
-.Temperature .unit {
-    font-size: 20px;
+.Temperature .unit .unitButton{
+    font-size: 16px;
     position: relative;
-    bottom: 36px;
+    bottom: 28px;
+    margin-left: 10px;
 }
 
 .Temperature .unit .active {
@@ -15,6 +16,6 @@
     color: #000;
     text-decoration: none;
     position: relative;
-    top: 16px;
+    bottom: 20px;
     opacity: 0.7;
 }
