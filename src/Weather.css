@@ -1,7 +1,3 @@
-.Weather .temperature {
-    font-size: 60px;
-}
-
 .Weather .icon {
     width: 200px;
     position: relative;
@@ -14,17 +10,7 @@
     opacity: 0.7;
 }
 
-.Weather .temperature {
-    font-size: 74px;
-    text-align: left;
-    font-weight: bold;
-}
 
-.Weather .unit {
-    font-size: 20px;
-    position: relative;
-    bottom: 36px;
-}
 
 .Weather .description {
     text-transform: capitalize;
@@ -84,4 +70,8 @@
     position: relative;
     top: 190px;
     opacity: 0.7;
+}
+
+.Weather .searchInput {
+    opacity: 0.6;
 }
