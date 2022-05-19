@@ -7,6 +7,7 @@ import Icon from "./Icon";
 import Forecast from "./Forecast";
 
 
+
 export default function Weather() {
     const [city, setCity] = useState("");
     const [weather, setWeather] = useState({dataShowing: false});
@@ -40,12 +41,12 @@ export default function Weather() {
             coordinates: response.data.coord,
             dataShowing: true            
         });
-        console.log(`1 Icon code is ${weather.icon}`);
+        console.log(`1 Icon code for ${weather.city} is ${weather.icon}`);
     }
 
     function searchCity(event) {
         event.preventDefault();
-        const apiKey = `5f472b7acba333cd8a035ea85a0d4d4c`;
+        const apiKey = `411a942cf48762f8f3d00fd7b552fe5c`;
         const units ="metric";
         let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
         axios.get(apiUrl).then(setData);
@@ -56,9 +57,10 @@ export default function Weather() {
        <div className="Weather">
           
        {form}
-       <Icon icon={weather.icon} />
+       <Icon icon={weather.icon} size={120} />
        <WeatherData weather={weather} />
-       <Forecast weather={weather}/>
+       <Forecast weather={weather} />
+       
 
        </div>
     )

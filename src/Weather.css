@@ -49,16 +49,8 @@
     border: none;
 }
 
-.Weather .forecastCard ul {
-    border: solid 1px red;
-    border-radius: 4px;
-   text-align: center;
-   
-}
-
-.Weather .forecastCard {
-    position: relative;
-    bottom: 40px;
+.Weather .forecast-card {
+    border: 1px solid red;
 }
 
 .Weather .formattedDate {
