@@ -6,8 +6,6 @@ import WeatherData from "./WeatherData";
 import Icon from "./Icon";
 import Forecast from "./Forecast";
 
-
-
 export default function Weather() {
     const [city, setCity] = useState("");
     const [weather, setWeather] = useState({dataShowing: false});
@@ -55,13 +53,10 @@ export default function Weather() {
     if(weather.dataShowing) {
     return(
        <div className="Weather">
-          
        {form}
        <Icon icon={weather.icon} size={120} />
        <WeatherData weather={weather} />
        <Forecast weather={weather} />
-       
-
        </div>
     )
     }

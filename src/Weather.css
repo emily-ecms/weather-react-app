@@ -10,8 +10,6 @@
     opacity: 0.7;
 }
 
-
-
 .Weather .description {
     text-transform: capitalize;
     font-weight: 200;
@@ -27,8 +25,7 @@
     opacity: 0.8;
     margin: auto;
     padding: 0;
-    text-align: right;
-    
+    text-align: right; 
 }
 
 .Weather .WeatherData {
