@@ -2,12 +2,11 @@ import axios from "axios";
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./Weather.css"
-import WeatherData from "./WeatherData";
-import Icon from "./Icon";
+import CurrentWeatherData from "./CurrentWeatherData";
 import Forecast from "./Forecast";
 
-export default function Weather() {
-    const [city, setCity] = useState("");
+export default function WeatherSearch(props) {
+    const [city, setCity] = useState(props.defaultCity);
     const [weather, setWeather] = useState({dataShowing: false});
    
     const form = (
@@ -39,7 +38,13 @@ export default function Weather() {
             coordinates: response.data.coord,
             dataShowing: true            
         });
-        console.log(`1 Icon code for ${weather.city} is ${weather.icon}`);
+    }
+
+    function searchDefaultCity() {
+        const apiKey = `411a942cf48762f8f3d00fd7b552fe5c`;
+        const units ="metric";
+        let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+        axios.get(apiUrl).then(setData);
     }
 
     function searchCity(event) {
@@ -54,17 +59,18 @@ export default function Weather() {
     return(
        <div className="Weather">
        {form}
-       <Icon icon={weather.icon} size={120} />
-       <WeatherData weather={weather} />
+       <CurrentWeatherData weather={weather} />
        <Forecast weather={weather} />
        </div>
     )
     }
     else {
-        return(
-            <div>
+        searchDefaultCity(city);
+        return (
+            <div className="Weather">
             {form}
             </div>
-        )
+            )
+        
     }
 }

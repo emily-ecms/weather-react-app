@@ -28,10 +28,7 @@
     text-align: right; 
 }
 
-.Weather .WeatherData {
-    position: relative;
-    bottom: 70px;
-}
+
 
 .Weather .weatherStats {
     list-style-type: none;
@@ -54,12 +51,12 @@
     text-align: left;
     opacity: 0.6;
 }
-
+/*
 .Weather .weatherIcon {
     position: relative;
     top: 190px;
     opacity: 0.7;
-}
+} */
 
 .Weather .searchInput {
     opacity: 0.6;
