@@ -7,7 +7,7 @@ import Icon from "./Icon";
 export default function CurrentWeatherData(props) {
    
     return (
-        <div className="WeatherData">
+        <div className="CurrentWeatherData">
         <h2 className="city mt-2 mb-2"> {props.weather.city}</h2>
         <FormattedDate date={props.weather.date} />
         <p className="description mb-2">{props.weather.description}</p>
