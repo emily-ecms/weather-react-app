@@ -20,7 +20,9 @@ export default function Temperature(props) {
             <div className="Temperature">{props.celsius}°
                 <span className="unit ms-3">
                     <span className="active">C |</span>
-                    <button className="unitButton btn-outline-primary rounded" onClick={getFahrenheit}>
+                    <button 
+                    className="unitButton btn-outline-primary rounded" 
+                    onClick={getFahrenheit}>
                         F</button>
                 </span>
             </div> 
@@ -31,7 +33,9 @@ export default function Temperature(props) {
                 <div className="Temperature">{props.fahrenheit}°
                 <span className="unit ms-3">
                     <span className="active">F |</span>
-                    <button className="unitButton btn-outline-primary rounded" onClick={getCelsius}>
+                    <button 
+                    className="unitButton btn-outline-primary rounded" 
+                    onClick={getCelsius}>
                         C</button>
                 </span>
                 </div> 

@@ -13,7 +13,9 @@ export default function CurrentWeatherData(props) {
         <p className="description mb-2">{props.weather.description}</p>
         <div className="row">
         <div className="col-5">
-            <Temperature celsius={Math.round(props.weather.temp)} fahrenheit={Math.round(props.weather.temp * 1.8 + 32)}/>  
+            <Temperature 
+            celsius={Math.round(props.weather.temp)} 
+            fahrenheit={Math.round(props.weather.temp * 1.8 + 32)}/>  
         </div>
          <div className="col-3">
             <Icon icon={props.weather.icon} size={120} /> 

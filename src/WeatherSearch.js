@@ -13,10 +13,19 @@ export default function WeatherSearch(props) {
     <form onSubmit={searchCity} >
         <div className="row">
             <div className="col-9">
-            <input type="search" className="form-control searchInput" placeholder="Search city" autoFocus="on" onChange={updateCity}></input>
+            <input 
+            type="search" 
+            className="form-control searchInput" 
+            placeholder="Search city" 
+            autoFocus="on" 
+            onChange={updateCity}>
+            </input>
             </div>
         <div className="col-3">
-            <button type="submit" className="btn btn-primary w-100">Search</button>
+            <button 
+            type="submit" 
+            className="btn btn-primary w-100">
+                Search</button>
             </div>
             </div>
     </form>
@@ -71,6 +80,5 @@ export default function WeatherSearch(props) {
             {form}
             </div>
             )
-        
     }
 }
