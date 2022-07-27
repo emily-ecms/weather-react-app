@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.css';
-import "./Weather.css"
+import "./WeatherSearch.css"
 import CurrentWeatherData from "./CurrentWeatherData";
 import Forecast from "./Forecast";
 
